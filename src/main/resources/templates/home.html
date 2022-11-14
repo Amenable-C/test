@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>게시판</title>
+</head>
+<body>
+    <div id="container">
+        <div class="wrap_article">
+            <article>
+                <a></a>
+            </article>
+        </div>
+
+        <table class="table table-striped">
+            <thead>
+            <tr>
+                <th th:width="100">제목</th>
+                <th th:width="100">작성자</th>
+                <th th:width="100">업로드 날짜</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr th:each="writing : ${writings}">
+                <td th:text="${writing.title}" th:href="@{/writing/{id} (id=${writing.id})}">제목</td>
+                <td th:text="${writing.userName}">작성자</td>
+                <td th:text="${writing.createDate}">업로드 날짜</td>
+                <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
+                <td th:width="100"><a href="#" th:href="@{/writing/{id} (id=${writing.id})}">이동</a></td>
+                <td th:width="100"><a href="#" th:href="@{/writing/update/{id} (id=${writing.id})}">수정</a></td>
+                <td th:width="100"><a href="#" th:href="@{/writing/delete/{id} (id=${writing.id})}">삭제</a></td>
+            </tr>
+            </tbody>
+        </table>
+
+        <div id="write">
+            <div class="btn">
+                <a href="/writing">
+                    <button type="button">글 작성</button>
+                </a>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

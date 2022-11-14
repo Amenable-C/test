@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h1>showWriting</h1>
+<div th:text="'작성자 : '+${userName}"></div>
+<div th:text="'제목 : '+${title}"></div>
+<div th:text="'내용 : ' + ${content}"></div>
+
+<div id="home">
+    <div class="btn">
+        <a href="/">
+            <button type="button">홈</button>
+        </a>
+    </div>
+</div>
+
+</body>
+</html>
