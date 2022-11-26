@@ -1,9 +1,9 @@
 spring:
   datasource:
-    url: jdbc:mariadb//board.c7wdhtetojg1.ap-northeast-2.rds.amazonaws.com:3306/board
-    username:
+    url: jdbc:mariadb://board.c7wdhtetojg1.ap-northeast-2.rds.amazonaws.com:3306/board # jdbc:h2:tcp://localhost/~/board
+    username: # sa
     password:
-    driver-class-name: org.mariadb.jdbc.Driver
+    driver-class-name: org.mariadb.jdbc.Driver # org.h2.Driver
 
   jpa:
     hibernate:
